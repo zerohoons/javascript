@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>array 배열</title>
+<script type="text/javascript">
+// 배열은 같은 종류의 데이터의 묶음이다.
+// 자바스크립트의 배열은 데이터의 종류와 상관없이 데이터의 묶음이다.
+// 방법 1
+var arr1 = new Array();
+arr1[0] = 10
+arr1[1] = true;
+arr1[2] = 'C';
+arr1[3] = '대한민국';
+arr1[4] = 3.14;
+
+document.write(arr1);
+document.write("<hr>")
+
+document.write("배열 출력은 for문을 이용한다.");
+for (var i = 0; i < arr1.length; i++) {
+	document.write("<h3>" + arr1[i] +"</h3>");
+}
+
+document.write("<hr>")
+
+//방법 2
+
+var arr2 = ["one", "two", false, 4.17];
+document.write("개선된 for문을 이용한 배열출력 : forin 사용");
+for ( var k in arr2) {
+	// var k 는 지정 배열의 배열 index 역할을 한다. -> arr1[k] 이기 때문에 k만 출력할경우 숫자만 나옴
+	// document.write("<h3>" + k +"</h3>");
+	document.write("<h3>" + arr2[k] +"</h3>");
+}
+document.write("<hr>")
+
+//방법 3
+var arr3 = new Array("카니발", "카렌스", "스타렉스", "카스타")
+document.write("개선된 for문을 이용한 배열출력 : forin 사용");
+for ( var k in arr2) {
+	document.write("<h3>" + arr3[k] +"</h3>");
+}
+document.write("<hr>")
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

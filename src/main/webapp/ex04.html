@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var s1 = 7;
+	var s2 = 2;
+	
+	//산술연산 : +,-,*,/,%
+	
+	document.write("<h2>산술연산자</h2>");
+	document.write("<h3><ul>");
+	// 문자열 + 숫자, 숫자 + 문자열, 문자열 + 문자열 (문자열 + 문자열 일때, '+'는 덧셈이 아닌 문자연결자이다.)
+	document.write("<li>"+"s1 + s2 ="+(s1+s2) +"</li>");
+	document.write("<li>"+"s1 - s2 ="+(s1-s2) +"</li>");
+	document.write("<li>"+"s1 * s2 ="+s1*s2 +"</li>");
+	document.write("<li>"+"s1 / s2 ="+s1/s2 +"</li>");
+	document.write("<li>"+"s1 % s2 ="+s1%s2 +"</li>");
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	document.write("<h2>비교연산자</h2>");
+	document.write("<h3><ul>");
+	document.write("<li>"+"s1 > s2 ="+(s1>s2) +"</li>");
+	document.write("<li>"+"s1 >= s2 ="+(s1>=s2) +"</li>");
+	document.write("<li>"+"s1 < s2 ="+(s1<s2) +"</li>");
+	document.write("<li>"+"s1 <= s2 ="+(s1<=s2) +"</li>");
+	document.write("<li>"+"s1 == s2 ="+(s1==s2) +"</li>");
+	document.write("<li>"+"s1 != s2 ="+(s1!=s2) +"</li>");
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	document.write("<h2>비교연산자 주의사항</h2>");
+	s1 = "1000";
+	s2 = 1000;
+	document.write("<h3><ul>");
+	// 자료형이 다름에도 불구하고, 데이터가 같기 때문에 == 의 경우 true로 출력
+	document.write("<li>"+"s1 == s2 ="+(s1==s2) +"</li>");
+	document.write("<li>"+"s1 != s2 ="+(s1!=s2) +"</li>");
+	
+	// 데이터와 자료형까지 비교하는 경우, (===)을 이용한다. : 일치 연산자
+	document.write("<li>"+"s1 === s2 ="+(s1===s2) +"</li>");
+	
+	s1 = true;
+	s2 = 1;
+	s3 = "1";
+	
+	// true와 숫자 1을 같다고 처리하기
+	document.write("<li>"+"s1 == s2 =" + (s1==s2) +"</li>");
+	
+	// true 와 문자1을 같다고 처리하기
+	document.write("<li>"+"s1 == s3 =" + (s1==s3) +"</li>");
+	
+	document.write("<hr>");
+	// 데이터와 자료형까지 비교하는 경우, (===)을 이용한다. : 일치 연산자
+	document.write("<li>"+"s1 === s2 ="+(s1===s2) +"</li>");
+	document.write("<li>"+"s1 === s3 ="+(s1===s3) +"</li>");
+	
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	s1 = true;
+	s2 = false;
+	document.write("<h2>논리연산자</h2>");
+	document.write("<h3><ul>");
+	document.write("<li>AND(&&) 조건 : 거짓을 만나면 결과는 거짓이 된다. (교집합)</li>");
+	document.write("<li>"+"s1 && s2 ="+(s1&&s2) +"</li>");
+	document.write("<li>"+"s1 && s1 ="+(s1&&s1) +"</li>");
+	document.write("<li>"+"s2 && s1 ="+(s2&&s1) +"</li>");
+	document.write("<li>"+"s2 && s2 ="+(s2&&s2) +"</li>");
+	
+	document.write("<hr>");
+	document.write("<li>OR(||) 조건 : 참을 만나면 결과는 무조건 참이 된다. (합집합)</li>");
+	document.write("<li>"+"s1 || s2 ="+(s1||s2) +"</li>");
+	document.write("<li>"+"s1 || s1 ="+(s1||s1) +"</li>");
+	document.write("<li>"+"s2 || s1 ="+(s2||s1) +"</li>");
+	document.write("<li>"+"s2 || s2 ="+(s2||s2) +"</li>");
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	//증감 연산자 : ++변수, 변수++, --변수, 변수--
+	s1 = 10;
+	s2 = 10;
+	document.write("<h2>증감연산자</h2>");
+	document.write("<h3><ul>");
+	document.write("<li>"+"++s1 ="+(++s1) +"</li>");
+	document.write("<li>"+"s2++ ="+(s2++) +"</li>");
+	document.write("<li>"+"s1 ="+(s1) +"</li>");
+	document.write("<li>"+"s2 ="+(s2) +"</li>");
+	document.write("<hr>");
+	document.write("<li>"+"--s1 ="+(--s1) +"</li>");
+	document.write("<li>"+"s2-- ="+(s2--) +"</li>");
+	document.write("<li>"+"s1 ="+(s1) +"</li>");
+	document.write("<li>"+"s2 ="+(s2) +"</li>");
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	//대입 연산자 : +=, -=, *=, /=, %=
+	document.write("<h2>증감연산자</h2>");
+	document.write("<h3><ul>");
+	document.write("<li>"+"s1 ="+(s1) +"</li>");
+	document.write("<li>"+"s1 +=3 ="+(s1+=3) +"</li>");
+	document.write("<li>"+"s1 -=3 ="+(s1-=3) +"</li>");
+	document.write("<li>"+"s1 *=3 ="+(s1*=3) +"</li>");
+	document.write("<li>"+"s1 /=3 ="+(s1/=3) +"</li>");
+	document.write("<li>"+"s1 %=3 ="+(s1%=3) +"</li>");
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	// 삼항 연산자 : var 변수 = 조건식 ? 참일때 실행할 문 : 거짓일때 실행할 문;
+	//			> 자바와 달리 자료형을 상관하지 않기 때문에, 자유롭게 사용할 수 있다.
+	
+	document.write("<h2>삼항연산자</h2>");
+	document.write("<h3><ul>");
+	s1 = 75;
+	var result = (s1 >= 80)?"합격":"불합격"
+	document.write("<li>"+ "결과는 " +result +" 입니다."+"</li>");
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

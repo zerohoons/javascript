@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch 문</title>
+<script type="text/javascript">
+/* 자바의 switch 문과 같다.
+	> switch{
+	case value : 내용; break;
+	case value : 내용; break;
+	case value : 내용; break;
+	}*/
+	
+// 받은 변수 k 가 한국이면 서울, 일본이면 도쿄 처럼 나라이름을 받아 수도를 내보내는 문을 만들고자한다. 
+// 한국, 일본, 중국, 미국 이외의 국가의 수도는 지구라고 한다.
+
+var str = prompt("어느나라요?");
+var res;
+
+switch (str) {
+case "한국":
+	res ="서울";
+	break;
+case "일본":
+	res ="도쿄";
+	break;
+case "중국":
+	res ="베이징";
+	break;
+case "미국":
+	res ="워싱턴";
+	break;
+
+default:
+	res = "지구";
+	break;
+}
+document.write(res);
+</script>
+</head>
+<body>
+
+</body>
+</html>

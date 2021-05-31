@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>If문</title>
+<script type="text/javascript">
+/* 자바의 If문과 같은 구조이다.
+	1. 단순 if 문
+	if(조건식){
+		참일때 실행
+	}
+	
+	2. if ~ else문
+	if(조건식){
+		참일때 실행
+	}else{
+		거짓일때 실행
+	}
+	
+	3. 다중 if 문
+	if(조건식1){
+		조건식 1이 참일때 실행
+	}else if(조건식2){
+		조건식 2가 참일때 실행
+	}else{
+		조건식 1, 2가 모두 거짓일 때 실행
+	}
+*/
+
+// 받은 점수 k1이 90이상이면 합격 아니면 불합격 (단순 if)
+	var point = prompt("점수를 입력하세요.");
+	var res;
+	if (point>=90){
+		res = "합격";
+	}else{
+		res = "불합격";
+	}
+	document.write(res+"입니다.");
+	document.write("<hr>");
+	// 근무시간이 8시간까지는 8720원, 8시간을 초과한시간 만큼은 1.5배가 된다. 근무시간을 입력받아 결과를 출력하는 if문
+	var time = prompt("근무시간을 입력하세요.");
+	var money;
+	if(time <= 8){
+		money = (time*8720);
+	}else if(time>8){
+		money = (time-8)*8720*1.5+(8720*8);
+	}
+	document.write("총 "+money+"원 입니다.");
+	document.write("<hr>");
+// 받은 점수 k2가 90이상이면 A, 80이상이면 B, 70이상이면 C, 나머지는 F학점이다. 결과를 출력하는 If문
+
+	point = prompt("점수를 입력하세요.");
+	res;
+	if (point>=90){
+		res = "A";
+	}else if(point >= 80){
+		res = "B";
+	}else if(point >= 70){
+		res = "C";
+	}else{
+		res = "F";
+	}
+	document.write(res+"입니다.");
+	document.write("<hr>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

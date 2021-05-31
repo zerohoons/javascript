@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for문</title>
+<script type="text/javascript">
+//일반적인 for문은 자바의 for문과 같다.
+//1-10까지 출력
+for (var i = 0; i<11; i++) {
+	document.write(i);	
+}
+document.write("<hr>");	
+
+// 0-10까지 홀수만 출력
+for (var i = 0; i < 11; i++) {
+	if ((i%2)==0) {
+		
+	} else {
+	 document.write("<p>"+i+"</p>");	
+	}
+}
+
+document.write("<hr>");	
+// 0-10까지 홀수의 합
+var sum = 0;
+for (var i = 0; i < 11; i++) {
+	if ((i%2)==0) {
+		
+	} else {
+	sum += i;
+	}
+}
+	 document.write("<p>"+sum+"</p>");	
+
+document.write("<hr>");	
+//5단 출력
+for (var i = 0; i < 10; i++) {
+	 document.write("<p>"+(5*i)+"</p>");	
+}
+
+//구구단 출력
+for (var i = 1; i < 10; i++) {
+	 document.write("<p>"+"------------------"+i+"단--------------------"+"</p>");	
+	for (var j = 0; j < 10; j++) {
+	 document.write("<p>"+i+"x"+j+"= "+(j*i)+" </p>");	
+	}
+
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>
