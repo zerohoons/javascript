@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>number : 숫자 관련 함수</title>
+<script type="text/javascript">
+/* 숫자는 한가지 유형이다. 즉 정수, 실수로 나누지 않는다.
+   숫자는 항상 64비트 부동 소수점이다.
+   정수는 최대 15자리까지 정확하다
+   실수는 최대 17자리까지 표시할 수 있지만 100% 정확하지는 않다.*/
+  
+   var x = 0.2+0.1;
+   document.write("<h3>" + x + "</h3>");
+
+   //숫자는 산술 연산이 가능하다. 단, 문자형 숫자의 경우 +를 제외한 연산만 가능하다. (문자형에서 +는 문자연결자이기 때문.)
+  
+  var s2 = 6;
+  var s1 = 10;
+   document.write("<h3>"+s1+"+"+s2 +"= "+ (s1+s2) + "</h3>");
+   document.write("<h3>"+s1+"-"+s2 +"= "+ (s1-s2) + "</h3>");
+   document.write("<h3>"+s1+"*"+s2 +"= "+ s1*s2 + "</h3>");
+   document.write("<h3>"+s1+"/"+s2 +"= "+ s1/s2 + "</h3>");
+   document.write("<h3>"+s1+"%"+s2 +"= "+ s1%s2 + "</h3>");
+
+   document.write("<hr>");
+   
+   s2 = "6";
+   s1 = "10";
+   document.write("<h3>"+s1+"+"+s2 +"= "+ (s1+s2) + "</h3>");
+   document.write("<h3>"+s1+"-"+s2 +"= "+ (s1-s2) + "</h3>");
+   document.write("<h3>"+s1+"*"+s2 +"= "+ s1*s2 + "</h3>");
+   document.write("<h3>"+s1+"/"+s2 +"= "+ s1/s2 + "</h3>");
+   document.write("<h3>"+s1+"%"+s2 +"= "+ s1%s2 + "</h3>");
+   document.write("<hr>");
+   
+   // 숫자를 문자로 변경 : toString();
+
+   s1 = 10;
+   s2 = 6;
+   document.write("<h3>"+s1+"+"+s2 +"= "+ (s1+s2) + "</h3>");
+   document.write("<h3>"+s1+"+"+s2 +"= "+ (s1.toString()+s2) + "</h3>");
+   document.write("<hr>");
+   
+   //지정한 소숫점 이하 자릿수를 반올림 : toFixed(지정자리) 지정하지 않으면 일의 자리가 디폴트.
+   s1=19.555;
+   s2=19.444;
+   document.write("<h3>"+s1.toFixed() + "</h3>");
+   document.write("<h3>"+s2.toFixed() + "</h3>");
+   document.write("<h3>"+s1.toFixed(0) + "</h3>");
+   document.write("<h3>"+s2.toFixed(0) + "</h3>");
+   document.write("<h3>"+s1.toFixed(1) + "</h3>");
+   document.write("<h3>"+s2.toFixed(1) + "</h3>");
+   document.write("<hr>");
+   
+   //toFixed(n)의 n은 0-100의 범위로 음수를 사용할 수 없다.
+   s1 = 5555.5555
+   s2 = 4444.4444
+/*    document.write("<h3>"+s1.toFixed(-1) + "</h3>");
+   document.write("<h3>"+s2.toFixed(-1) + "</h3>"); */
+	//대신에 /10 을 통해 원하는 정수 자릿수를 소숫점으로 변경하고 이후에 *10을 다시 해준다.
+   document.write("<h3>"+(s1/10).toFixed()*10 + "</h3>");
+   document.write("<h3>"+(s2/10).toFixed()*10 + "</h3>");
+   document.write("<hr>");
+   
+   // 문자형 숫자를 숫자형으로 변경. : Number, parseInt, parseFloat
+   // NaN(Not a Number) : 숫자가 들어갈 자이레 다른 데이터가 들어오면 생기는 에러
+   // isNaN : NaN 상태를 확인 true 면 NaN
+   // true == 1 하면 같다. true === 1 다르다.
+   
+   document.write(true + 10 +"<br>");
+   document.write(true - 10 +"<br>");
+   
+   document.write(Number(true) - 10 +"<br>");
+   document.write(parseInt(true) - 10 +"<br>"); //parseInt와 parseFloat는 숫자 외에는 계산하지 못함.
+   document.write(parseFloat(true) - 10 +"<br>");
+   document.write("<hr>");
+   
+   document.write("Number "+(Number(10) + 10)+"<br>");
+   document.write("parseInt "+(parseInt(10) + 10) +"<br>"); //parseInt와 parseFloat는 숫자 외에는 계산하지 못함.
+   document.write("parseFloat "+(parseFloat(10) + 10) +"<br>");
+   document.write("Number "+(Number(10.4) + 10) +"<br>");
+   document.write("parseInt "+(parseInt(10.4) + 10) +"<br>"); //parseInt는 정수만 처리한다.
+   document.write("parseFloat "+(parseFloat(10.4) + 10) +"<br>");
+   document.write("<hr>");
+   
+   //첫글자가 숫자가 아닐때
+   document.write(Number("a10") + 10+"<br>");
+   document.write(parseInt("a10") + 10 +"<br>"); //parseInt와 parseFloat는 숫자 외에는 계산하지 못함.
+   document.write(parseFloat("a10") + 10 +"<br>");
+   document.write("<hr>");
+
+   // 중간이 숫자가 아닐때 Number와 parseXXX의 차이점.
+   // Number는 전체가 문자형 숫자가 아니면 NaN(문자형 숫자까지는 OK)
+   // parse는 숫자가 아닌 글자의 앞까지는 숫자로 인정한다.
+   document.write(Number("1010a10") + 10+"<br>");
+   document.write(parseInt("1010a10") + 10 +"<br>"); //parseInt와 parseFloat는 숫자 외에는 계산하지 못함.
+   document.write(parseFloat("1010a10") + 10 +"<br>");
+   document.write("<hr>");
+   
+   //앞 뒤에 띄어쓰기가 있는 경우
+   document.write(Number("   10  ") + 10+"<br>");
+   document.write(parseInt("  10   ") + 10 +"<br>"); //parseInt와 parseFloat는 숫자 외에는 계산하지 못함.
+   document.write(parseFloat("  10   ") + 10 +"<br>");
+   document.write("<hr>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

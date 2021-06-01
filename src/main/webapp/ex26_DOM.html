@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM : 요소변경</title>
+</head>
+<body>
+<!-- 
+	html 요소 변경
+	element.innerHTML : 내용변경
+	element.attribute : 속성변경
+	element.style.property : CSS 스타일 속성 변경
+ -->
+ <p align = "center"> Hello World </p>
+ <p id ="p1"> Hello World </p>
+ <p id ="p2"><span>Hello World</span></p>
+ <hr>
+ <p id ="res1"> 서울시 마포구 서교동 </p>
+ <p id ="res2"></p>
+ <img id = "img1" alt="" src="images/pic_bulboff.gif">
+ 
+ <script type="text/javascript">
+ document.getElementById("res1").innerHTML = "KOREA seoul"
+ document.getElementById("res2").innerHTML = "<h2>KOREA seoul</h2>"
+ 
+ document.getElementById("p1").align = "center"
+ document.getElementById("img1").src = "images/pic_bulbon.gif"
+ 
+ document.getElementById("p2").style.color ="tomato";
+ document.getElementById("p2").style.backgroundColor ="green"
+ </script>
+ 
+</body>
+</html>

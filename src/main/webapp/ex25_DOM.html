@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+</head>
+<body>
+<!-- 
+	HTML 요소(태그) 추가 및 삭제하기.
+	document.createElement(element) : 요소생성
+	document.removeChild(element) : 자식요소 삭제
+	document.appendChild(element) : 자식요소 추가
+	document.insertBefore(element1, element2) : 요소2 앞에 요소1 넣기
+	document.createTextNode(text) : text 생성 > 시작태그+텍스트+끝태그 로 구성	
+ -->
+ 
+ <div id = "div1">
+ 	<p id = "p1">서울시 마포구</p>
+	<p id = "p2">첨단빌딩 7층</p>
+ </div>
+ 
+ <script type="text/javascript">
+ 	var p = document.createElement("p") //p태그 생성
+ 	var hr = document.createElement("hr") //hr태그 생성
+ 	var txt = document.createTextNode("1강의장") //hr태그 생성
+ 	
+ 	//글자를 p태그에 넣기
+ 	p.appendChild(txt);
+ 	
+ 	document.body.appendChild(hr);
+ 	document.body.appendChild(p);
+ 	
+ 	var p = document.createElement("p") //p태그 생성
+ 	var hr = document.createElement("hr") //hr태그 생성
+ 	var txt = document.createTextNode("1강의장") //hr태그 생성
+
+ 	p.appendChild(txt);
+
+ 	var div1 = document.getElementById("div1");
+ 	div1.appendChild(p);
+ 	div1.appendChild(hr);
+ 	
+ 	//id p1과 p2 사이에 선을 넣자.
+ 	var hr3 = document.createElement("hr");
+ 	var p2 = document.getElementById("p2")
+ 	//hr3를 p2위에 삽입하자.
+ 	div1.insertBefore(hr3,p2);
+ </script>
+</body>
+</html>

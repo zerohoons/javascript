@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#but{
+margin: auto;
+width: 200px;
+}
+#box1{
+	width: 250px;
+	height: 300px;
+	line-height:200px;
+	text-align:center;
+	margin: auto;
+	border: 2px solid black;
+}
+</style>
+<script type="text/javascript">
+function setRED(){
+	document.getElementById("box1").style.backgroundColor="red"
+}
+function setGREEN(){
+	document.getElementById("box1").style.backgroundColor="green"
+	
+}
+function setBLUE(){
+	document.getElementById("box1").style.backgroundColor="blue"
+	
+}
+</script>
+</head>
+<body>
+	<div id = "but">
+	<button onclick="setRED()">RED</button>
+	<button onclick="setGREEN()">GREEN</button>
+	<button onclick="setBLUE()">BLUE</button>
+	</div>
+	<div id ="box1"> THE BOX </div>
+</body>
+</html>

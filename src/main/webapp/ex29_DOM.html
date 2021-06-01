@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM event</title>
+<style type="text/css">
+div{
+	width: 150px;
+	height: 25px;
+	padding: 20px;
+}
+#box1{
+background-color: lightpink;
+}
+#box2{
+background-color: lightgreen;
+}
+#box3{
+background-color: lightyellow;
+}
+#box4{
+background-color: lightblue;
+}
+</style>
+<script type="text/javascript">
+function mOver(obj) {
+	obj.innerHTML = "<strong> Thank you <strong>"
+	obj.style.backgroundColor = "hotpink";
+}
+function mOut(obj) {
+	obj.innerHTML = "MOUSE OVER ME"
+	obj.style.backgroundColor = "lightpink";
+	
+}
+/* obj가 있기 때문에 아래에서 this를 사용가능. */
+function mDown(obj){
+	obj.innerHTML = "<strong> Thank you <strong>"
+	obj.style.backgroundColor = "green";
+}
+function mUp(obj) {
+	obj.innerHTML = "MOUSE CLICK ME"
+	obj.style.backgroundColor = "lightgreen";
+	
+}
+
+function test(){
+	document.getElementById("box3").innerHTML = "<strong> Thank you <strong>"
+	document.getElementById("box3").style.backgroundColor = "yellow";
+}
+
+</script>
+</head>
+<body>
+<!-- 이벤트는 항상 틀을 잡는 게 우선! 효과는 나중에  -->
+<!-- 아래의 (this)는 해당 요소 자체를 말한다. -->
+	<div id ="box1" onmouseover="mOver(this)" onmouseout="mOut(this)"> MOUSE OVER ME </div>
+	<div id ="box2" onmousedown="mDown(this)" onmouseup="mUp(this)"> MOUSE CLICK ME </div>
+	<div id ="box3" onclick="test()"> MOUSE CLICK ME </div>
+	<div id ="box4" > MOUSE CLICK ME </div>
+	<script type="text/javascript">
+	/* onXXX가 없으면 이벤트 리스너를 통해 이벤트를 처리해야한다.*/
+	document.getElementById("box4").addEventListener("click",function(){
+		document.getElementById("box4").innerHTML = "<strong> Thank you <strong>"
+			document.getElementById("box4").style.backgroundColor = "blue";
+	})
+	</script>
+</body>
+</html>

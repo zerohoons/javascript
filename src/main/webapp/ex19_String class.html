@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String class</title>
+<script type="text/javascript">
+var str1 = 'Hello';
+// new String, new Number, new Boolean은 권장하지 않음.
+var str2 = new String("한국 ICT 인재 개발원");
+
+document.write("<h3>")
+// length : 길이
+document.write(str1.length +"<br>")
+
+// charAt(n) : n번째 문자 추출 0부터 시작
+document.write(str1.charAt(2) +"<br>")
+
+//concat(str) : 현재 문자열 뒤에 인자로 받은 문자열 추가 == +
+document.write(str1.concat('Word~') +"<br>");
+document.write(str1+'Word~'+"<br>");
+
+//indexOf(문자|문자열, 시작위치) : 지정 위치와 가장 가까운 문자의 위치를 찾음, 시작위치 기본값 0
+document.write(str1.indexOf('l') +"<br>")
+document.write("두번째 l은 " + str1.indexOf('l',str1.indexOf('l')+1) +"<br>") 
+
+//lastIndexOf(문자|문자열) : 문자|문자열의 마지막 위치
+document.write(str1.lastIndexOf('l') +"<br>")
+
+//search(문자|문자열) : 해당 문자|문자열을 찾아 위치값 구하기
+document.write(str1.search('l') +"<br>")
+
+//slice(시작, 끝) : 시작부터 끝까지의 내용을 잘라서 표시. 끝은 포함하지 않음. :음수는 끝부터 -1
+str1 = "apple, banana, kiwi"
+document.write(str1.slice(0,5) +"<br>")
+document.write(str1.slice(6,13) +"<br>")
+document.write(str1.slice(14,19) +"<br>")
+document.write(str1.slice(-5) +"<br>")
+document.write(str1.slice(7) +"<br>")
+
+document.write("<hr>")
+
+//substring : slice와 동일. 단 음수는 사용하지 못함.
+document.write(str1.substring(0,5) +"<br>")
+document.write(str1.substring(6,13) +"<br>")
+document.write(str1.substring(14,19) +"<br>")
+document.write(str1.substring(-5) +"<br>") //전부 다 출력시킴.
+document.write(str1.substring(7) +"<br>")
+
+document.write("<hr>")
+//substr(시작, 갯수) : 시작위치부터 갯수만큼 추출 음수 사용가능.
+document.write(str1.substr(0,5) +"<br>")
+document.write(str1.substr(6,2) +"<br>")
+document.write(str1.substr(15,4) +"<br>")
+document.write(str1.substr(-5,5) +"<br>") //전부 다 출력시킴.
+document.write(str1.substr(-12,6) +"<br>")
+document.write("<hr>")
+
+//replace(old, new) : 치환
+document.write(str1.replace("Banana","Mango") +"<br>")
+document.write("<hr>")
+
+//toUpperCase() : 대문자로 변경, toLowerCase(): 소문자로 변경
+document.write(str1.toUpperCase() +"<br>")
+document.write(str1.toLowerCase() +"<br>")
+document.write("<hr>")
+
+//split(구문자) : 구분자 기준으로 배열을 만들어 저장
+var fruits = str1.split(",");
+for ( var k in fruits) {
+	document.write("<h3>" + fruits[k] + "</h3>")
+	}
+	
+//trim() : 앞 뒤 공백제거.
+str1 = "    apple, banana, kiwi       "
+document.write("trim 입력 전 길이 :"+str1.length+"<br>")
+document.write("trim 입력 후 길이 :"+str1.trim().length+"<br>")
+
+document.write("</h3>")
+</script>
+</head>
+<body>
+
+</body>
+</html>

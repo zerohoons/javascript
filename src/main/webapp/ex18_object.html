@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 : Object/title></title>
+<script type="text/javascript">
+	//생성자 함수
+	function Person(name,age,addr){
+		this.name = name;
+		this.age = age;
+		this.addr = addr;		
+	}
+	
+	var person1 = new Person("홍길동",24,"서울")
+	var person2 = new Person("임꺽정",42,"울산")
+	
+	document.write("<h3> 이름 : " + person1["name"] + "</h3>")
+	document.write("<h3> 나이 : " + person1["age"] + "</h3>")
+	document.write("<h3> 주소 : " + person1["addr"] + "</h3>")
+	document.write("<hr>")
+	document.write("<h3> 이름 : " + person2["name"] + "</h3>")
+	document.write("<h3> 나이 : " + person2["age"] + "</h3>")
+	document.write("<h3> 주소 : " + person2["addr"] + "</h3>")
+	document.write("<hr>")
+	
+	// 객체를 배열에 넣어서 출력
+
+	var arr = [person1, person2];
+	
+	document.write("<h3> 이름 : " + arr[0]["name"] + "</h3>")
+	document.write("<h3> 나이 : " + arr[0]["age"] + "</h3>")
+	document.write("<h3> 주소 : " + arr[0]["addr"] + "</h3>")
+	document.write("<hr>")
+	document.write("<h3> 이름 : " + arr[1]["name"] + "</h3>")
+	document.write("<h3> 나이 : " + arr[1]["age"] + "</h3>")
+	document.write("<h3> 주소 : " + arr[1]["addr"] + "</h3>")
+	document.write("<hr>")
+	
+	//for~ in을 통한 배열 출력
+	for ( var k in arr) {
+	document.write("<h3> 이름 : " + arr[k]["name"] + "</h3>")
+	document.write("<h3> 나이 : " + arr[k]["age"] + "</h3>")
+	document.write("<h3> 주소 : " + arr[k]["addr"] + "</h3>")
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

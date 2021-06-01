@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 Object</title>
+<script type="text/javascript">
+var person = {
+		name : "임꺽정",
+		age : 46,
+		gender : false,
+		play : function(){return "안녕하세요."
+		},
+		sound : function(){
+			// 객체 내에서 함수가 자신의 속성을 사용하려면 this가 필요하다.
+			document.write("<li>"+this.name+" / "+this.age+"</li>");
+		}
+}
+
+document.write("<h2> 객체 상태값 호출 </h2>")
+document.write("<h3>")
+document.write("<li>"+person["name"]+"</li>")
+document.write("<li>"+person.age+"</li>")
+document.write("<li>"+person.gender+"</li>")
+document.write("<li>"+person.play()+"</li>")
+person.sound() //익명함수는 바로 실행 가능.
+document.write("</h3>")
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

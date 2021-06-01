@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>return이 있는 function</title>
+<script type="text/javascript">
+//리턴이 없는 함수.
+function test1(a,b){
+	document.write("<h3>리턴이 없는 함수 입니다. 결과 : "+(a+b)+"</h3>")
+};
+
+function test2(a,b){
+	document.write("<h3>리턴이 있는 함수 입니다.</h3>")
+	return a-b
+}
+
+//리턴이 없는 익명함수
+var test03 = function (){
+	document.write("<h3>리턴이 없는 익명 함수 입니다.</h3>")
+	
+}
+
+//리턴이 있는 익명함수
+var test04 = function (){
+	var str = "<h3>document.write(익명함수 변수())</h3>"
+	return str;	
+}
+
+//리턴과 인자가 있는 익명함수
+var test05 = function (a,b){
+	var str = "<h3>리턴과 인자가 있는 익명 함수 입니다. 결과 : "+(a+b)+"</h3>"
+	return str;	
+}
+
+//리턴은 없지만 인자는 있는 함수.
+var test06 = function (a,b){
+	document.write("<h3>리턴은 없지만 인자는 있는 익명 함수 입니다.결과 : "+(a+b)+"</h3>")
+	
+}
+</script>
+</head>
+<body>
+<h2> 자바 스크립트 function </h2>
+<script type="text/javascript">
+	test1(12,4);
+	document.write("<hr>")
+	var res = test2(12,4)
+	document.write("<h3>결과 :"+res+"</h3>")
+	document.write("<hr>")
+	
+	test03();
+	document.write("<hr>")
+	
+	document.write("<h3>리턴이 있는 익명함수 호출 = document.write를 이용해서 아래처럼"+test04()+"</h3>")
+	document.write("<hr>")
+	
+	document.write("<h3>리턴이 있는 익명함수 호출 = document.write를 이용해서 아래처럼"+test05(12,4)+"</h3>")
+	document.write("<hr>")
+	
+	
+	test06(12,4)
+</script>
+</body>
+</html>

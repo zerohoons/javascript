@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM Event</title>
+<script type="text/javascript">
+function test1(){
+	var str = document.getElementById("fname").value;
+	document.getElementById("fname").value = str.toUpperCase();
+}
+function test2(){
+	document.getElementById("p1").innerHTML ="<h3>한국 ICT 인재개발원 </h3>"
+}
+function test3(){
+	document.getElementById("p2").style.display ="none"
+	
+}
+function test4(){
+	document.getElementById("p3").style.color ="blue"
+	document.getElementById("p3").style.fontSize ="32px"
+	
+}
+</script>
+</head>
+<body>
+	<h2> id 선택자 활용한 이벤트 </h2>
+	<p id = "p1"></p>
+	<p id = "p2">HelloWorld</p>
+	<p id = "p3">대한민국 서울시</p>
+	
+	<!-- 입력한 글자를 대문자로 변경 
+		 onchange는 enter를 입력해야 실행. input 값은 value-->
+	
+	Enter your name : <input type = "text" id = "fname" onchange = test1()><br>
+	<hr>
+	<!-- style 주기 : id가 p1인곳에 글자 삽입하기. -->
+	<button onclick = "test2()">눌러주세요</button>	
+	<!-- style 주기 : id가 p2인 데이터 안보이게 하기. -->
+	<button onclick = "test3()">눌러주세요</button>	
+	<!-- style 주기 : id가 p3인 데이터의 글자크기와 색 지정 -->
+	<button onclick = "test4()">눌러주세요</button>	
+</body>
+</html>
