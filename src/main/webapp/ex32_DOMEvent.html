@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		width: 250px;
+		margin: auto;
+	}
+</style>
+<script type="text/javascript">
+	function turnon() {
+		document.getElementById("img_1").src="images/pic_bulbon.gif";
+	}
+	function turnoff() {
+		document.getElementById("img_1").src="images/pic_bulboff.gif";
+	}
+	function viewon() {
+		document.getElementById("img_2").src="images/pic_bulbon.gif";
+	}
+	function viewoff() {
+		document.getElementById("img_2").src="images/pic_bulboff.gif";
+	}
+	function viewon2() {
+		document.getElementById("img_3").style.visibility ="visible";
+	}
+	function viewoff2() {
+		document.getElementById("img_3").style.visibility="hidden";
+	}
+</script>
+</head>
+<body>
+	<div>
+		<p>
+		    <button onclick="turnon()">켜기</button>
+		    <button onclick="turnoff()">끄기</button>
+		</p>
+		<img id="img_1"  alt="" src="images/pic_bulboff.gif">
+		<h3>버튼을 눌러주세요</h3>
+	</div>
+	<div>
+		<img id="img_2" alt="" src="images/pic_bulboff.gif" onmouseover="viewon()" onmouseout="viewoff()">
+		<h3>마우스를 그림에 올려주세요</h3>
+	</div>
+	<div>
+		<img id="img_3" alt="" src="images/img_5terre.jpg" style="width: 200px; visibility: hidden;" >
+		<h3 onmouseover="viewon2()" onmouseout="viewoff2()">글자에 마우스 올려주세요</h3>
+	</div>
+</body>
+</html>
+
+
+
+
+
